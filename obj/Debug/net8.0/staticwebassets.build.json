@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LVYsoC+xP/iT054wq0JAqKEZt2qXZlQcGAZo6GlckJk=",
+  "Hash": "NUCfwJty+3BIetD85qtBFQk7SIiNMe1XAOADp6s3z+s=",
   "Source": "ExcelReading",
   "BasePath": "_content/ExcelReading",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\wwwroot\\files\\x.xlsx",
+      "SourceId": "ExcelReading",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\wwwroot\\",
+      "BasePath": "_content/ExcelReading",
+      "RelativePath": "files/x.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\x.xlsx"
     },
     {
       "Identity": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\wwwroot\\files\\xe.xls",

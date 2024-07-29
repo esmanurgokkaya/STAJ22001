@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExcelReading")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea74646d4374681a69aebf3aed743804852ee8c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExcelReading")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExcelReading")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

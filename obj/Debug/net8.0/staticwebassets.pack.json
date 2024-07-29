@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\wwwroot\\files\\x.xlsx",
+      "PackagePath": "staticwebassets\\files\\x.xlsx"
+    },
+    {
       "Id": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\wwwroot\\files\\xe.xls",
       "PackagePath": "staticwebassets\\files\\xe.xls"
     },

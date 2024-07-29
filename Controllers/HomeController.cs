@@ -1,10 +1,8 @@
-
 using ExcelDataReader;
 using ExcelReading.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-//using String = System.String;
 
 namespace WebApplication6.Controllers
 {
@@ -37,21 +35,23 @@ namespace WebApplication6.Controllers
 
             if (file != null && file.Length > 0)
             {
-
+                // dosya yolu berlirlenir
                 var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files");
+                // dosya yolu yoksa tanýmlanýr
                 if (!Directory.Exists(uploads))
                 {
                     Directory.CreateDirectory(uploads);
                 }
-
+                // kaydedilecek belge dosya yoluna eklenir
                 var filePath = Path.Combine(uploads, file.FileName);
-
+                // yeni yol kullanýlarak belge kaydedilir.
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await file.CopyToAsync(stream);
                 }
-
-                List<String> dataList = GetDataList(filePath);
+                //belgeyi okuyacak metot çaðrýlýr
+                var dataList = GetDataList(filePath);
+                //okunan belgedeki tekrarlananlarý döndürecek metot çaðrýlýr
                 var data = CountData(dataList);
                 return View(data);
             }
@@ -62,26 +62,27 @@ namespace WebApplication6.Controllers
 
         public List<Data> CountData(List<string> data)
 
-        {
+        {   // gelen veri boþsa boþ list döndürülür
             if (data == null || !data.Any())
             {
-                return new List<Data>(); // Boþ liste döndürüyoruz.
+                return new List<Data>(); 
             }
-            var countDictionary = new Dictionary<string, int>();
-
+            // dictionary yapýsý oluþturulur
+            var dataDictionary = new Dictionary<string, int>();
+            //gelen veriler dolaþýlýr ve dictionary içine eklenir tekrar  karþýlaþýnca deðeri artýrýlýr.
             foreach (var item in data)
             {
-                if (countDictionary.ContainsKey(item))
+                if (dataDictionary.ContainsKey(item))
                 {
-                    countDictionary[item]++;
+                    dataDictionary[item]++;
                 }
                 else
                 {
-                    countDictionary[item] = 1;
+                    dataDictionary[item] = 1;
                 }
             }
-
-            var result = countDictionary.Select(kvp => new Data
+            // model yapýmýza uyarlamak için liste dönüþüm yapýlýr
+            var result = dataDictionary.Select(kvp => new Data
             {
                 Name = kvp.Key,
                 Count = kvp.Value
@@ -92,7 +93,7 @@ namespace WebApplication6.Controllers
         public List<String> GetDataList(string filePath)
         {
             List<string> data = new List<string>();
-
+            // yüklenen belge yolu metodun parametresinden alýnýp okunur
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             using (var stream = System.IO.File.OpenRead(filePath))
             {
@@ -104,8 +105,9 @@ namespace WebApplication6.Controllers
                         {
                             var cellValue = reader.GetValue(column);
                             if (cellValue != null)
-                            {
-                                data.Add(cellValue.ToString());
+                            {   // baþtan ve sondan boþluk karakterini silerek verilerin tekrarýný daha doðru hesaplar
+                                string cellValueStr = cellValue.ToString().Trim();
+                                data.Add(cellValueStr);
                             }
                         }
                     }

@@ -32,3 +32,4 @@ C:\Users\esman\source\repos\ExcelReading\ExcelReading\obj\Debug\net8.0\refint\Ex
 C:\Users\esman\source\repos\ExcelReading\ExcelReading\obj\Debug\net8.0\ExcelReading.pdb
 C:\Users\esman\source\repos\ExcelReading\ExcelReading\obj\Debug\net8.0\ExcelReading.genruntimeconfig.cache
 C:\Users\esman\source\repos\ExcelReading\ExcelReading\obj\Debug\net8.0\ref\ExcelReading.dll
+C:\Users\esman\source\repos\ExcelReading\ExcelReading\obj\Debug\net8.0\ExcelReading.sourcelink.json
