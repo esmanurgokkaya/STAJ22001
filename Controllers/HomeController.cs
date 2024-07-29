@@ -65,7 +65,7 @@ namespace WebApplication6.Controllers
         {
             if (data == null || !data.Any())
             {
-                return new List<Data>(); // Boþ liste döndürüyoruz.
+                return new List<Data>(); 
             }
             var countDictionary = new Dictionary<string, int>();
 
