@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace WebApplication6.Controllers
+namespace ExcelReading.Controllers
 {
     public class HomeController : Controller
     {
@@ -37,21 +37,21 @@ namespace WebApplication6.Controllers
             {
                 // dosya yolu berlirlenir
                 var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files");
-                // dosya yolu yoksa tanýmlanýr
+                // dosya yolu yoksa tanÃ½mlanÃ½r
                 if (!Directory.Exists(uploads))
                 {
                     Directory.CreateDirectory(uploads);
                 }
                 // kaydedilecek belge dosya yoluna eklenir
                 var filePath = Path.Combine(uploads, file.FileName);
-                // yeni yol kullanýlarak belge kaydedilir.
+                // yeni yol kullanÃ½larak belge kaydedilir.
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await file.CopyToAsync(stream);
                 }
-                //belgeyi okuyacak metot çaðrýlýr
+                //belgeyi okuyacak metot Ã§aÃ°rÃ½lÃ½r
                 var dataList = GetDataList(filePath);
-                //okunan belgedeki tekrarlananlarý döndürecek metot çaðrýlýr
+                //okunan belgedeki tekrarlananlarÃ½ dÃ¶ndÃ¼recek metot Ã§aÃ°rÃ½lÃ½r
                 var data = CountData(dataList);
                 return View(data);
             }
@@ -62,14 +62,14 @@ namespace WebApplication6.Controllers
 
         public List<Data> CountData(List<string> data)
 
-        {   // gelen veri boþsa boþ list döndürülür
+        {   // gelen veri boÃ¾sa boÃ¾ list dÃ¶ndÃ¼rÃ¼lÃ¼r
             if (data == null || !data.Any())
             {
                 return new List<Data>(); 
             }
-            // dictionary yapýsý oluþturulur
+            // dictionary yapÃ½sÃ½ oluÃ¾turulur
             var dataDictionary = new Dictionary<string, int>();
-            //gelen veriler dolaþýlýr ve dictionary içine eklenir tekrar  karþýlaþýnca deðeri artýrýlýr.
+            //gelen veriler dolaÃ¾Ã½lÃ½r ve dictionary iÃ§ine eklenir tekrar  karÃ¾Ã½laÃ¾Ã½nca deÃ°eri artÃ½rÃ½lÃ½r.
             foreach (var item in data)
             {
                 if (dataDictionary.ContainsKey(item))
@@ -81,7 +81,7 @@ namespace WebApplication6.Controllers
                     dataDictionary[item] = 1;
                 }
             }
-            // model yapýmýza uyarlamak için liste dönüþüm yapýlýr
+            // model yapÃ½mÃ½za uyarlamak iÃ§in liste dÃ¶nÃ¼Ã¾Ã¼m yapÃ½lÃ½r
             var result = dataDictionary.Select(kvp => new Data
             {
                 Name = kvp.Key,
@@ -93,7 +93,7 @@ namespace WebApplication6.Controllers
         public List<String> GetDataList(string filePath)
         {
             List<string> data = new List<string>();
-            // yüklenen belge yolu metodun parametresinden alýnýp okunur
+            // yÃ¼klenen belge yolu metodun parametresinden alÃ½nÃ½p okunur
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             using (var stream = System.IO.File.OpenRead(filePath))
             {
@@ -105,7 +105,7 @@ namespace WebApplication6.Controllers
                         {
                             var cellValue = reader.GetValue(column);
                             if (cellValue != null)
-                            {   // baþtan ve sondan boþluk karakterini silerek verilerin tekrarýný daha doðru hesaplar
+                            {   // baÃ¾tan ve sondan boÃ¾luk karakterini silerek verilerin tekrarÃ½nÃ½ daha doÃ°ru hesaplar
                                 string cellValueStr = cellValue.ToString().Trim();
                                 data.Add(cellValueStr);
                             }
