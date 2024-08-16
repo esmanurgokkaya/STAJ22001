@@ -1,0 +1,66 @@
+$primary-color: #007BFF;
+$secondary-color: #6C757D;
+$background-color: #555555;
+$form-background-color: #FFFFFF;
+$border-color: #DDD;
+$input-border-color: #CCC;
+$button-hover-color: darken($primary-color, 10%);
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #555555;
+  
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #555555;
+
+  .contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 70px;
+    
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+        
+      }
+
+      .form-control {
+        border-radius: 5px;
+        padding: 10px;
+        
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  }
+}
+.footer{
+  background-color:#555555 ;
+}

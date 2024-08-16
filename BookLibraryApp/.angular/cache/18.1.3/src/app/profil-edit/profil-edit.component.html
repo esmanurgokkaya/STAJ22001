@@ -1,0 +1,42 @@
+
+
+
+<div class="profile-container">
+  <form [formGroup] ="profileEditForm" (ngSubmit)="onUpdate()">      
+      <div class="profile-details">
+        
+        <div class="detail-item">
+          <label for="fullName">{{ 'FULL_NAME' | translate }}:</label>
+          <input id="fullName" formControlName="fullName"   type="text" class="form-control">
+        </div>
+        
+        <div class="detail-item">
+          <label for="email">{{ 'EMAIL' | translate }}:</label>
+          <input id="email"  type="email"  formControlName="email" class="form-control">
+        </div>
+  
+      
+  
+        <div class="radio-group">
+          <label>
+            <input type="radio" [value]="genderType.male" formControlName="Gender"  >
+            <span class="checkmark"></span>
+            {{ 'MALE' | translate }}
+          </label>
+          <label>
+            <input type="radio" [value]="genderType.female" formControlName="Gender" >
+            <span class="checkmark"></span>
+            {{ 'FEMALE' | translate }}
+          </label>
+          
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button type="submit" class="btn btn-success">{{ 'EDIT-PROFILE' | translate }}</button>
+      </div>
+    </form>
+      <div class="profile-actions">
+        <button type="submit" class="btn btn-danger" routerLink="/profile" (click)="navigateToProfile()" routerLinkActive="active">{{ 'CANCEL' | translate }}</button>
+      </div>
+  </div>
+<app-another-navbar></app-another-navbar> 

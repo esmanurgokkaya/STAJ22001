@@ -1,0 +1,201 @@
+.books-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  margin-top: 100px;
+  h2 {
+    text-align: center;
+    color: #28a745;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 4px;
+      background-color: #28a745;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  #h2-2 {
+    text-align: center;
+    color: red;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 4px;
+      background-color: red;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  .book-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    .book-item {
+      background-color: white;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; /* Uzun metinlerin bir sonraki satıra geçmesini sağlar */
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+  
+      strong {
+        color: #333;
+        font-weight: 600;
+        margin-right: 10px; /* Başlıklar arasında boşluk bırak */
+      }
+  
+      span {
+        margin-right: 15px; /* Metinler arasında daha fazla boşluk bırak */
+        white-space: nowrap; /* Metinlerin tek satırda kalmasını sağlar */
+      }
+  
+      &::before {
+        content: "✅";
+        display: inline-block;
+        margin-right: 15px; /* Simge ile metin arasında boşluk bırak */
+        font-size: 1.2em;
+        vertical-align: middle;
+        animation: bounceIn 0.6s ease-in-out;
+      }
+    }
+  }
+}  
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 50px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+button.okundu {
+  background-color: #28a745;
+
+  &:hover {
+    background-color: darken(#28a745, 10%);
+  }
+}
+
+button.iade-et {
+  background-color: #dc3545;
+
+  &:hover {
+    background-color: darken(#dc3545, 10%);
+  }
+}

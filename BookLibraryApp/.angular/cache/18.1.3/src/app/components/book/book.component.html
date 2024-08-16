@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+<div class="container">
+  <h1>Book List</h1>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <!-- Form to add a new book -->
+  <form (ngSubmit)="onSubmit()" #bookForm="ngForm" class="bookls">
+    <div>
+      <label for="bookName">Book Name</label>
+      <input id="bookName" [(ngModel)]="newBook.bookName" name="bookName" required>
+    </div>
+    <div>
+      <label for="publisher">Publisher</label>
+      <input id="publisher" [(ngModel)]="newBook.publisher" name="publisher" required>
+    </div>
+    <div>
+      <label for="author">Author</label>
+      <input id="author" [(ngModel)]="newBook.author" name="author" required>
+    </div>
+   
+    <div>
+      <label for="stock">Stock</label>
+      <input id="stock" [(ngModel)]="newBook.stock" name="stock" required>
+    </div>
+    <div>
+      <label for="coverImageUrl">CoverImageUrl</label>
+      <input id="coverImageUrl" [(ngModel)]="newBook.coverImageUrl" name="coverImageUrl" required>
+    </div>
+    <div>
+      <label for="category">Category</label>
+      <select id="category" [(ngModel)]="newBook.category" name="category" required>
+        <option value="" disabled selected>Select a category</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+    
+    <div>
+      <label>
+        <input type="checkbox" [(ngModel)]="newBook.isAvailable" name="isAvailable">
+        Available
+      </label>
+    </div>
+    <button type="submit" [disabled]="!bookForm.form.valid">Add Book</button>
+  </form>
+
+  <!-- Message displayed when there are no books -->
+  <div *ngIf="books.length === 0 && !errorMessage" class="no-books-message">
+    No books available.
+  </div>
+
+  <!-- Book List -->
+  <ul *ngIf="books.length > 0" class="booksl">
+    <li *ngFor="let book of paginatedBooks" >
+      <a href="#" (click)="getBookByName(book.bookName)">{{ book.bookName }}</a> 
+      by {{ book.author }} (Publisher: {{ book.publisher }}) - 
+      Available: {{ book.isAvailable ? 'Yes' : 'No' }}
+      <!-- Delete button -->
+      <button (click)="deleteBook(book.bookName)">Delete</button>
+    </li>
+  </ul>
+  <br>
+
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary"(click)="goToPreviousPage()" [disabled]="currentPage === 1" ><i class="bi bi-arrow-left"></i></button>
+    <span>Sayfa {{ currentPage }}</span>
+    <button type="button" class="btn btn-primary" (click)="goToNextPage()" [disabled]="paginatedBooks.length < itemsPerPage"><i class="bi bi-arrow-right"></i> </button>
+  </div>
+
+  <br>
+
+  <!-- Input field to get a book by ID -->
+  <div class="get-book-by-id" class="bookls">
+    <h2>Get Book by ID</h2>
+    <label for="bookId">Book ID</label>
+    <input id="bookId" [(ngModel)]="bookId" name="bookId" required>
+    <button >Get Book</button>
+  </div>
+
+  <!-- Selected Book Details -->
+  <div *ngIf="selectedBook" class="bookls">
+    <h2>Book Details</h2>
+    <p><strong>Book Name:</strong> {{ selectedBook.bookName }}</p>
+    <p><strong>Author:</strong> {{ selectedBook.author }}</p>
+    <p><strong>Publisher:</strong> {{ selectedBook.publisher }}</p>
+    <p><strong>Available:</strong> {{ selectedBook.isAvailable ? 'Yes' : 'No' }}</p>
+  </div>
+</div>
