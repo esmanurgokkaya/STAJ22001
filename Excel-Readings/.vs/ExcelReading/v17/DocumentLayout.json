@@ -1,0 +1,129 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\esman\\source\\repos\\ExcelReading\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|c:\\users\\esman\\source\\repos\\excelreading\\excelreading\\views\\home\\excel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|solutionrelative:excelreading\\views\\home\\excel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|c:\\users\\esman\\source\\repos\\excelreading\\excelreading\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|solutionrelative:excelreading\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|c:\\users\\esman\\source\\repos\\excelreading\\excelreading\\models\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|solutionrelative:excelreading\\models\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|c:\\users\\esman\\source\\repos\\excelreading\\excelreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69CF681A-B497-4B27-BB26-030E449CA0FD}|ExcelReading\\ExcelReading.csproj|solutionrelative:excelreading\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ExcelReading\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ExcelReading\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAQwGkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T08:00:06.921Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Excel.cshtml",
+              "DocumentMoniker": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Views\\Home\\Excel.cshtml",
+              "RelativeDocumentMoniker": "ExcelReading\\Views\\Home\\Excel.cshtml",
+              "ToolTip": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Views\\Home\\Excel.cshtml",
+              "RelativeToolTip": "ExcelReading\\Views\\Home\\Excel.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-29T07:59:42.881Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Models\\Data.cs",
+              "RelativeDocumentMoniker": "ExcelReading\\Models\\Data.cs",
+              "ToolTip": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Models\\Data.cs",
+              "RelativeToolTip": "ExcelReading\\Models\\Data.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T09:10:31.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Program.cs",
+              "RelativeDocumentMoniker": "ExcelReading\\Program.cs",
+              "ToolTip": "C:\\Users\\esman\\source\\repos\\ExcelReading\\ExcelReading\\Program.cs",
+              "RelativeToolTip": "ExcelReading\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T08:54:20.688Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
